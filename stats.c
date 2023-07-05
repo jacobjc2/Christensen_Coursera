@@ -38,7 +38,8 @@ void main() {
   /* Other Variable Declarations Go Here */
 
   /* Statistics and Printing Functions Go Here */
-  printf("Testing Array: \n");
+  printf("Sorted Array: \n");
+  sort_array(test, SIZE);
   print_array(test, SIZE);                              
   print_statistics(test, SIZE);                              
 }
