@@ -10,9 +10,11 @@
  *****************************************************************************/
 /**
  * @file stats.h 
- * @brief <Add Brief Description Here >
+ * @brief Find and print the statistics of a given array.
  *
- * <Add Extended Description Here>
+ * This file provides several functions to find and display statistics
+ * of an array, including mean, median, max, and min, as well as sort the
+ * given array.
  *
  * @author Jacob Christensen
  * @date July 5, 2023
@@ -22,73 +24,76 @@
 #define __STATS_H__
 
 /**
- * @brief Print statistics
+ * @brief Print array statistics
  *
  * A function that prints the statistics of an array including minimum, maximum, mean, and median.
+ * 
+ * @param unsigned char *arr - Array to print
+ * @param unsigned int length - Length of array
  *
  * @return 0 for success, or 1 for error
  */
-int print_statistics();
+int print_statistics(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Print array
  *
  * Given an array of data and a length, prints the array to the screen.
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to print
+ * @param unsigned int length - Length of array
  *
- * @return 0 for success, or 1 for error
+ * @return 0 for success, or -1 for error
  */
-int print_array(char *arr, int length);
+int print_array(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Find median
  *
  * Given an array of data and a length, returns the median value
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to find median
+ * @param unsigned int length - Length of array
  *
- * @return 0 for success, or 1 for error
+ * @return unsigned int median of array, or -1 for error
  */
-int find_median(char *arr, int length);
+int find_median(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Find mean
  *
  * Given an array of data and a length, returns the mean
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to find mean
+ * @param unsigned int length - Length of array
  *
- * @return 0 for success, or 1 for error
+ * @return unsigned int mean of array, or -1 for error
  */
-int find_mean(char *arr, int length);
+int find_mean(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Find maximum
  *
  * Given an array of data and a length, returns the maximum
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to find max
+ * @param unsigned int length - Length of array
  *
- * @return 0 for success, or 1 for error
+ * @return unsigned int median of array, or 1 for error
  */
-int find_maximum(char *arr, int length);
+int find_maximum(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Find minimum
  *
  * Given an array of data and a length, returns the minimum
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to find min
+ * @param unsigned int length - Length of array
  *
- * @return 0 for success, or 1 for error
+ * @return unsigned int minimum of array, or 1 for error
  */
-int find_minimum(char *arr, int length);
+int find_minimum(unsigned char *arr, unsigned int length);
 
 /**
  * @brief Sort array
@@ -96,11 +101,11 @@ int find_minimum(char *arr, int length);
  * Given an array of data and a length, sorts the array from largest to smallest.
  * (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
  *
- * @param char *arr - Array to print
- * @param int length - Length of array to print
+ * @param unsigned char *arr - Array to sort
+ * @param unsigned int length - Length of array
  *
  * @return 0 for success, or 1 for error
  */
-int sort_array(char *arr, int length);
+int sort_array(unsigned char *arr, unsigned int length);
 
 #endif /* __STATS_H__ */

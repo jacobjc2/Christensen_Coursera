@@ -38,41 +38,69 @@ void main() {
   /* Other Variable Declarations Go Here */
 
   /* Statistics and Printing Functions Go Here */
-
+  print_statistics(test, SIZE);                              
 }
 
 /* Add other Implementation File Code Here */
-int print_statistics() {
-
+int print_statistics(unsigned char *arr, unsigned int length) {
+  printf("Array Statistics: \n");
+  printf("\tMedian:\t %d\n",find_median(arr, length));
+  printf("\tMean:\t %d\n",find_mean(arr, length));
+  printf("\tMaximum: %d\n",find_maximum(arr, length));
+  printf("\tMinimum: %d\n",find_minimum(arr, length));
   return(0);
 }
 
-int print_array(char *arr, int length) {
-
+int print_array(unsigned char *arr, unsigned int length) {
+  for(int i=0;i<length;i++) {
+    printf("%d : %d\n", i, arr[i]);
+  }
   return(0);
 }
 
-int find_median(char *arr, int length) {
-
-  return(0);
+int find_median(unsigned char *arr, unsigned int length) {
+  sort_array(arr, length);
+  return(arr[length/2]);
 }
 
-int find_mean(char *arr, int length) {
-
-  return(0);
+int find_mean(unsigned char *arr, unsigned int length) {
+  int sum = 0;
+  for(int i=0;i<length;i++) {
+    sum += arr[i];
+  }
+  return(sum/length);
 }
 
-int find_maximum(char *arr, int length) {
-
-  return(0);
+int find_maximum(unsigned char *arr, unsigned int length) {
+  int max = arr[0];
+  for(int i=1;i<length;i++) {
+    if(arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return(max);
 }
 
-int find_minimum(char *arr, int length) {
-
-  return(0);
+int find_minimum(unsigned char *arr, unsigned int length) {
+  int min = arr[0];
+  for(int i=1;i<length;i++) {
+    if(arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return(min);
 }
 
-int sort_array(char *arr, int length) {
-
+int sort_array(unsigned char *arr, unsigned int length) {
+  char chr;
+  for(int i=0;i<length;i++) {
+    for(int j=i+1;j<length;j++){
+      if(arr[i] < arr[j]) {
+        chr =  arr[i];
+        arr[i] = arr[j];
+        arr[j] = chr;    
+      }
+    }
+  }
   return(0);
 }
