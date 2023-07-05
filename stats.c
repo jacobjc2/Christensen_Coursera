@@ -38,6 +38,8 @@ void main() {
   /* Other Variable Declarations Go Here */
 
   /* Statistics and Printing Functions Go Here */
+  printf("Testing Array: \n");
+  print_array(test, SIZE);                              
   print_statistics(test, SIZE);                              
 }
 
