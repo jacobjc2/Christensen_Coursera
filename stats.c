@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
+ * @file stats.c 
  * @brief <Add Brief Description Here >
  *
  * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Jacob Christensen
+ * @date July 5, 2023
  *
  */
 
@@ -36,8 +36,43 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+
   /* Statistics and Printing Functions Go Here */
 
 }
 
 /* Add other Implementation File Code Here */
+int print_statistics() {
+
+  return(0);
+}
+
+int print_array(char *arr, int length) {
+
+  return(0);
+}
+
+int find_median(char *arr, int length) {
+
+  return(0);
+}
+
+int find_mean(char *arr, int length) {
+
+  return(0);
+}
+
+int find_maximum(char *arr, int length) {
+
+  return(0);
+}
+
+int find_minimum(char *arr, int length) {
+
+  return(0);
+}
+
+int sort_array(char *arr, int length) {
+
+  return(0);
+}

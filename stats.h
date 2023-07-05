@@ -9,32 +9,98 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
+ * @file stats.h 
  * @brief <Add Brief Description Here >
  *
  * <Add Extended Description Here>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Jacob Christensen
+ * @date July 5, 2023
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/**
+ * @brief Print statistics
+ *
+ * A function that prints the statistics of an array including minimum, maximum, mean, and median.
+ *
+ * @return 0 for success, or 1 for error
+ */
+int print_statistics();
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print array
  *
- * <Add Extended Description Here>
+ * Given an array of data and a length, prints the array to the screen.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
  *
- * @return <Add Return Informaiton here>
+ * @return 0 for success, or 1 for error
  */
+int print_array(char *arr, int length);
 
+/**
+ * @brief Find median
+ *
+ * Given an array of data and a length, returns the median value
+ *
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
+ *
+ * @return 0 for success, or 1 for error
+ */
+int find_median(char *arr, int length);
+
+/**
+ * @brief Find mean
+ *
+ * Given an array of data and a length, returns the mean
+ *
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
+ *
+ * @return 0 for success, or 1 for error
+ */
+int find_mean(char *arr, int length);
+
+/**
+ * @brief Find maximum
+ *
+ * Given an array of data and a length, returns the maximum
+ *
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
+ *
+ * @return 0 for success, or 1 for error
+ */
+int find_maximum(char *arr, int length);
+
+/**
+ * @brief Find minimum
+ *
+ * Given an array of data and a length, returns the minimum
+ *
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
+ *
+ * @return 0 for success, or 1 for error
+ */
+int find_minimum(char *arr, int length);
+
+/**
+ * @brief Sort array
+ *
+ * Given an array of data and a length, sorts the array from largest to smallest.
+ * (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+ *
+ * @param char *arr - Array to print
+ * @param int length - Length of array to print
+ *
+ * @return 0 for success, or 1 for error
+ */
+int sort_array(char *arr, int length);
 
 #endif /* __STATS_H__ */
